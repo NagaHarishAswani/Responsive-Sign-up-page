@@ -1,4 +1,4 @@
-<?php include 'register_form.php'; ?>
+<?php include 'login_form.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,49 +11,32 @@
 </head>
 
 <body>
-   
 <div class="form-container">
    <main class="main-container">
         <div class="form-section">
-            <div class="sales-btn" id="registration"> <h4><center>Registration</center></h4></div>
-            <form class="main-form" action="register_form.php" method="post">
+            <div class="sales-btn" id="registration"> <h4><center>Login</center></h4></div>
+            <form class="main-form" action="login_form.php" method="post">
 			<?php include 'register_error.php'; ?>
+
                 <div class="input-field">
-                    <input class="first-name" name="first_name" id="reg-first-name" type="text" placeholder="First Name">
-                    <div class="first-name-error"></div>
-                    <label for="reg-first-name" class="name-label"></label>
-                </div>
-                <div class="input-field">
-                    <input class="last-name" name="last_name" type="text" placeholder="Last Name">
-                    <div class="last-name-error"></div>
-                    <label for="last-name" class="lastname-label"></label>
-                </div>
-                <div class="input-field">
-                    <input class="user-email" name="email"type="email" placeholder="Email Address">
+                    <input class="user-email" name="email" type="email" placeholder="Enter your Email">
                     <div class="user-email-error"></div>
                     <label for="user-email" class="email-label"></label>
                 </div>
                 <div class="input-field">
-                    <input class="user-pass" name="password" type="password" placeholder="Password">
-                    <div class="user-pass-error"></div>
-                    <label for="user-pass" class="pass-label"></label>
-                </div>
-				<div class="input-field">
-                    <input class="user-cpass" name="cpassword"type="password" placeholder="Confirm Password">
+                    <input class="user-pass" name="password" type="password" placeholder="Enter Your Password">
                     <div class="user-pass-error"></div>
                     <label for="user-pass" class="pass-label"></label>
                 </div>
                 <div class="input-field">
-                    <input class="submit-info" type="submit" name="submit" value="Register" id="registerBtn">
-                    <label for="submit-info" class="success-msg"></label>
+                    <input class="submit-info" type="submit" name="submit" value="Login" id="registerBtn">
                 </div>
                 <label class="tnc" for="registerBtn"> By clicking the button, you are agreeing to our <a href="#">Terms and
                         Services</a>
                 </label>
-				<p>Already have an account? <a href="login.html">Login now</a></p>
+				<p>Don't have an account? <a href="index.html">Register now</a></p>
             </form>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -62,5 +45,4 @@
     </main>
 
 </body>
-
 </html>
