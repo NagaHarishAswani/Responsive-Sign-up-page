@@ -1,0 +1,72 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if (!isset($_SESSION['admin_name'])) {
+    header('location:login_form.php');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="main-container">
+        <div class="form-section">
+            <div class="sales-btn" id="registration"> <h4><center>Registration</center></h4></div>
+            <form class="main-form">
+                <div class="input-field">
+                    <input class="first-name" id="reg-first-name" type="text" placeholder="First Name">
+                    <div class="first-name-error"></div>
+                    <label for="reg-first-name" class="name-label"></label>
+                </div>
+                <div class="input-field">
+                    <input class="last-name" type="text" placeholder="Last Name">
+                    <div class="last-name-error"></div>
+                    <label for="last-name" class="lastname-label"></label>
+                </div>
+                <div class="input-field">
+                    <input class="user-email" type="email" placeholder="Email Address">
+                    <div class="user-email-error"></div>
+                    <label for="user-email" class="email-label"></label>
+                </div>
+                <div class="input-field">
+                    <input class="user-pass" type="password" placeholder="Password">
+                    <div class="user-pass-error"></div>
+                    <label for="user-pass" class="pass-label"></label>
+                </div>
+                <div class="input-field">
+                    <button class="submit-info" id="registerBtn">Register</button>
+                    <label for="submit-info" class="success-msg"></label>
+                </div>
+                <label class="tnc" for="registerBtn"> By clicking the button, you are agreeing to our <a href="#">Terms and
+                        Services</a>
+                </label>
+            </form>
+            <div id="profileSection" style="display: none;">
+                <p>Welcome to your profile! Add your additional details.</p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="app.js"></script>
+        <script src="registration.js"></script>
+    </main>
+
+</body>
+
+</html>
